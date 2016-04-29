@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+const path = require('path')
+const fs   = require('fs')
+const cmd = require('commander');
+const a2s  = require(path.join(path.dirname(fs.realpathSync(__filename)), '../'))
+const pjson  = require(path.join(path.dirname(fs.realpathSync(__filename)), '../package.json'))
+
+
+cmd
+  .version(pjson.version)
+  .usage('[options] <file|dir>')
+  // .command('[file]', 'convert [file] to srt-file')
+  // .command('[dir]', 'convert all ass-files in [dir] recursively')
+  .option('-w, --watch', 'watch <dir> and convert ass-files instantly')
+  .parse(process.argv);
+
+if (cmd.args.length <= 0) {
+  cmd.outputHelp()
+  process.exit()
+}
+
+a2s(cmd.args[0])
+if (cmd.watch){
+  a2s.watch(cmd.args[0])
+}
+
+// console.log(cmd.args, cmd.commands)
+

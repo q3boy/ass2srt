@@ -1,0 +1,33 @@
+{
+  "name": "ass2srt",
+  "version": "0.1.0",
+  "description": "ass file convert to srt file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/q3boy/ass2srt.git"
+  },
+  "keywords": [
+    "ass",
+    "srt",
+    "subtitle"
+  ],
+  "author": "q3boy <q3boy1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/q3boy/ass2srt/issues"
+  },
+  "homepage": "https://github.com/q3boy/ass2srt#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "charset-detector": "0.0.2",
+    "commander": "^2.9.0",
+    "graceful-fs": "^4.1.3",
+    "iconv-lite": "^0.4.13",
+    "nodejs-fs-utils": "^1.0.26",
+    "watchr": "^2.4.13"
+  }
+}
